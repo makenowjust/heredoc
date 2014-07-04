@@ -50,3 +50,19 @@ func TestDoc(t *testing.T) {
 		}
 	}
 }
+
+func TestDocf(t *testing.T) {
+	// test case
+	str := `
+		int: %3d
+		string: %s
+	`
+	i := 42
+	s := "Hello"
+	expect := "int:  42\nstring: Hello\n"
+
+	result := heredoc.Docf(str, i, s)
+	if result != expect {
+		t.Errorf("test failed: expected=> %#v, result=> %#v", expect, result)
+	}
+}

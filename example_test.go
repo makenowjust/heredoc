@@ -44,3 +44,17 @@ func ExampleDoc_spec() {
 	//
 	// Previous is last line.
 }
+
+func ExampleDocf() {
+	libName := "github.com/MakeNowJust/heredoc"
+	author := "TSUYUSATO Kitsune (@MakeNowJust)"
+	fmt.Printf(heredoc.Docf(`
+		Library Name  : %s
+		Author        : %s
+		Repository URL: http://%s.git
+	`, libName, author, libName))
+	// Output
+	// Library Name  : github.com/MakeNowJust/heredoc
+	// Author        : TSUYUSATO Kitsune (@MakeNowJust)
+	// Repository URL: http://github.com/MakeNowJust/heredoc.git
+}
