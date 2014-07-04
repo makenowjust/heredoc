@@ -23,6 +23,7 @@
 package heredoc
 
 import (
+	"fmt"
 	"strings"
 	"unicode"
 )
@@ -79,4 +80,10 @@ func Doc(raw string) string {
 	}
 
 	return strings.Join(lines, "\n")
+}
+
+// heredoc.Docf returns unindented and formatted string as here-document.
+// This format is same with package fmt's format.
+func Docf(raw string, args ...interface{}) string {
+	return fmt.Sprintf(Doc(raw), args...)
 }
