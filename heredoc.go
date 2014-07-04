@@ -32,15 +32,22 @@ import (
 //     1. Find most little indent size. (Skip empty lines)
 //     2. Remove this indents of lines.
 func Doc(raw string) string {
+	skipFirstLine := false
 	if raw[0] == '\n' {
 		raw = raw[1:]
+	} else {
+		skipFirstLine = true
 	}
 
 	minIndentSize := int(^uint(0) >> 1) // Max value of type int
 	lines := strings.Split(raw, "\n")
 
 	// 1.
-	for _, line := range lines {
+	for i, line := range lines {
+		if i == 0 && skipFirstLine {
+			continue
+		}
+
 		indentSize := 0
 		for _, r := range []rune(line) {
 			if unicode.IsSpace(r) {
@@ -49,13 +56,17 @@ func Doc(raw string) string {
 				break
 			}
 		}
-	  if indentSize < minIndentSize {
-	  	  minIndentSize = indentSize
-	  }
+		if len(line) != indentSize && indentSize < minIndentSize {
+			minIndentSize = indentSize
+		}
 	}
 
 	// 2.
 	for i, line := range lines {
+		if i == 0 && skipFirstLine {
+			continue
+		}
+
 		lines[i] = line[minIndentSize:]
 	}
 
