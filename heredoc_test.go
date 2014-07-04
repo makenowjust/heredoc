@@ -35,6 +35,11 @@ var tests = []testCase{
 					`,
 		"Foo\n\tBar\n\t\tHoge\n\t\t\t"},
 	{`Foo Bar`, "Foo Bar"},
+	{
+		`
+		Foo
+		Bar
+	`, "Foo\nBar\n"},
 }
 
 func TestDoc(t *testing.T) {

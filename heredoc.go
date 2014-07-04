@@ -6,17 +6,17 @@
 //
 // Golang supports raw-string syntax.
 //     doc := `
-//       Foo
-//       Bar
+//     	Foo
+//     	Bar
 //     `
 // But raw-string cannot recognize indent. Thus such content is indented string, equivalent to
-//     "\n  Foo\n  Bar\n"
+//     "\n\tFoo\n\tBar\n"
 // I dont't want this!
 //
 // However this problem is solved by package heredoc.
 //     doc := heredoc.Doc(`
-//       Foo
-//       Bar
+//     	Foo
+//     	Bar
 //     `)
 // It is equivalent to
 //     "Foo\nBar\n"
@@ -28,6 +28,7 @@ import (
 )
 
 // heredoc.Doc retutns unindented string as here-document.
+//
 // Process of making here-document:
 //     1. Find most little indent size. (Skip empty lines)
 //     2. Remove this indents of lines.
@@ -56,7 +57,12 @@ func Doc(raw string) string {
 				break
 			}
 		}
-		if len(line) != indentSize && indentSize < minIndentSize {
+
+		if len(line) == indentSize {
+			if i == len(lines)-1 && indentSize < minIndentSize {
+				lines[i] = ""
+			}
+		} else if indentSize < minIndentSize {
 			minIndentSize = indentSize
 		}
 	}
@@ -67,7 +73,9 @@ func Doc(raw string) string {
 			continue
 		}
 
-		lines[i] = line[minIndentSize:]
+		if len(lines[i]) >= minIndentSize {
+			lines[i] = line[minIndentSize:]
+		}
 	}
 
 	return strings.Join(lines, "\n")
