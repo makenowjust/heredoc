@@ -1,4 +1,4 @@
-#heredoc [![github.com/MakeNowJust/heredoc - Go Walker](http://gowalker.org/api/v1/badge)](https://gowalker.org/github.com/MakeNowJust/heredoc)
+#heredoc [![Build Status](https://drone.io/github.com/MakeNowJust/heredoc/status.png)](https://drone.io/github.com/MakeNowJust/heredoc/latest) [![github.com/MakeNowJust/heredoc - Go Walker](http://gowalker.org/api/v1/badge)](https://gowalker.org/github.com/MakeNowJust/heredoc)
 
 ##About
 
