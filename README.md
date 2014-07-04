@@ -45,8 +45,8 @@ func main() {
 
 ##API Document
 
- - [github.com/MakeNowJust/heredoc](https://gowalker.org/github.com/MakeNowJust/heredoc)
- - [github.com/MakeNowJust/heredoc/dot](https://gowalker.org/github.com/MakeNowJust/heredoc/dot)
+ - [Go Walker - github.com/MakeNowJust/heredoc](https://gowalker.org/github.com/MakeNowJust/heredoc)
+ - [Go Walker - github.com/MakeNowJust/heredoc/dot](https://gowalker.org/github.com/MakeNowJust/heredoc/dot)
 
 ##License
 
