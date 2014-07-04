@@ -53,7 +53,7 @@ func ExampleDocf() {
 		Author        : %s
 		Repository URL: http://%s.git
 	`, libName, author, libName))
-	// Output
+	// Output:
 	// Library Name  : github.com/MakeNowJust/heredoc
 	// Author        : TSUYUSATO Kitsune (@MakeNowJust)
 	// Repository URL: http://github.com/MakeNowJust/heredoc.git
