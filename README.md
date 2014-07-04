@@ -1,4 +1,4 @@
-#heredoc [![Build Status](https://drone.io/github.com/MakeNowJust/heredoc/status.png)](https://drone.io/github.com/MakeNowJust/heredoc/latest) [![github.com/MakeNowJust/heredoc - Go Walker](http://gowalker.org/api/v1/badge)](https://gowalker.org/github.com/MakeNowJust/heredoc)
+#heredoc [![Build Status](https://drone.io/github.com/MakeNowJust/heredoc/status.png)](https://drone.io/github.com/MakeNowJust/heredoc/latest) [![Go Walker](http://gowalker.org/api/v1/badge)](https://gowalker.org/github.com/MakeNowJust/heredoc)
 
 ##About
 
@@ -13,7 +13,10 @@ $ go get github.com/MakeNowJust/heredoc
 ##Import
 
 ```go
+// usual
 import "github.com/MakeNowJust/heredoc"
+// shortcuts
+import . "github.com/MakeNowJust/heredoc/dot"
 ```
 
 ##Example
@@ -23,11 +26,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/MakeNowJust/heredoc"
+	. "github.com/MakeNowJust/heredoc/dot"
 )
 
 func main() {
-	fmt.Println(heredoc.Doc(`
+	fmt.Println(D(`
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 		sed do eiusmod tempor incididunt ut labore et dolore magna
 		aliqua. Ut enim ad minim veniam, ...
@@ -39,6 +42,11 @@ func main() {
 	//
 }
 ```
+
+##API Document
+
+ - [github.com/MakeNowJust/heredoc](https://gowalker.org/github.com/MakeNowJust/heredoc)
+ - [github.com/MakeNowJust/heredoc/dot](https://gowalker.org/github.com/MakeNowJust/heredoc/dot)
 
 ##License
 
