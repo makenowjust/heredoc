@@ -6,13 +6,13 @@
 //
 // For example:
 //     package main
-//     
+//
 //     import (
 //     	"fmt"
 //     	"runtime"
 //     	. "github.com/MakeNowJust/heredoc/dot"
 //     )
-//     
+//
 //     func main() {
 //     	fmt.Printf(D(`
 //     		GOROOT: %s
