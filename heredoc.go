@@ -2,14 +2,14 @@
 // This software is released under the MIT License.
 // http://opensource.org/licenses/mit-license.php
 
-// Package heredoc provides the here-document with keeping indent.
+// Package heredoc provides creation of here-documents from raw strings.
 //
 // Golang supports raw-string syntax.
 //     doc := `
 //     	Foo
 //     	Bar
 //     `
-// But raw-string cannot recognize indent. Thus such content is indented string, equivalent to
+// But raw-string cannot recognize indentation. Thus such content is an indented string, equivalent to
 //     "\n\tFoo\n\tBar\n"
 // I dont't want this!
 //
@@ -18,7 +18,7 @@
 //     	Foo
 //     	Bar
 //     `)
-// It is equivalent to
+// Is equivalent to
 //     "Foo\nBar\n"
 package heredoc
 
@@ -30,11 +30,7 @@ import (
 
 const maxInt = int(^uint(0) >> 1)
 
-// heredoc.Doc retutns unindented string as here-document.
-//
-// Process of making here-document:
-//     1. Find most little indent size. (Skip empty lines)
-//     2. Remove this indents of lines.
+// Doc returns un-indented string as here-document.
 func Doc(raw string) string {
 	skipFirstLine := false
 	if raw[0] == '\n' {
@@ -95,8 +91,8 @@ func removeIndentation(lines []string, n int, skipFirstLine bool) []string {
 	return lines
 }
 
-// heredoc.Docf returns unindented and formatted string as here-document.
-// This format is same with package fmt's format.
+// Docf returns unindented and formatted string as here-document.
+// Formatting is done as for fmt.Printf().
 func Docf(raw string, args ...interface{}) string {
 	return fmt.Sprintf(Doc(raw), args...)
 }
