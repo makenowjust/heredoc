@@ -68,18 +68,24 @@ func Doc(raw string) string {
 		}
 	}
 
-	// 2.
+	lines = removeIndentation(lines, minIndentSize, skipFirstLine)
+
+	return strings.Join(lines, "\n")
+}
+
+// removeIndentation removes n characters from the front of each line in lines.
+// Skips first line if skipFirstLine is true, skips empty lines.
+func removeIndentation(lines []string, n int, skipFirstLine bool) []string {
 	for i, line := range lines {
 		if i == 0 && skipFirstLine {
 			continue
 		}
 
-		if len(lines[i]) >= minIndentSize {
-			lines[i] = line[minIndentSize:]
+		if len(lines[i]) >= n {
+			lines[i] = line[n:]
 		}
 	}
-
-	return strings.Join(lines, "\n")
+	return lines
 }
 
 // heredoc.Docf returns unindented and formatted string as here-document.
