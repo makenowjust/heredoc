@@ -28,6 +28,8 @@ import (
 	"unicode"
 )
 
+const maxInt = int(^uint(0) >> 1)
+
 // heredoc.Doc retutns unindented string as here-document.
 //
 // Process of making here-document:
@@ -41,10 +43,18 @@ func Doc(raw string) string {
 		skipFirstLine = true
 	}
 
-	minIndentSize := int(^uint(0) >> 1) // Max value of type int
 	lines := strings.Split(raw, "\n")
 
-	// 1.
+	minIndentSize := getMinIndent(lines, skipFirstLine)
+	lines = removeIndentation(lines, minIndentSize, skipFirstLine)
+
+	return strings.Join(lines, "\n")
+}
+
+// getMinIndent calculates the minimum indentation in lines, excluding empty lines.
+func getMinIndent(lines []string, skipFirstLine bool) int {
+	minIndentSize := maxInt
+
 	for i, line := range lines {
 		if i == 0 && skipFirstLine {
 			continue
@@ -67,10 +77,7 @@ func Doc(raw string) string {
 			minIndentSize = indentSize
 		}
 	}
-
-	lines = removeIndentation(lines, minIndentSize, skipFirstLine)
-
-	return strings.Join(lines, "\n")
+	return minIndentSize
 }
 
 // removeIndentation removes n characters from the front of each line in lines.
