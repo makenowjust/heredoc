@@ -3,11 +3,11 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: golang:1.8.3
+      - image: circleci/golang:1.12
 
-    working_directory: /go/src/github.com/MakeNowJust/heredoc
     steps:
       - checkout
       - run:
           command: |
+            export GO11MODULES=on
             go test -v
