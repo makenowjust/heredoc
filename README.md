@@ -1,4 +1,6 @@
-# heredoc [![CircleCI](https://circleci.com/gh/MakeNowJust/heredoc.svg?style=svg)](https://circleci.com/gh/MakeNowJust/heredoc) [![Go Walker](http://gowalker.org/api/v1/badge)](https://gowalker.org/github.com/MakeNowJust/heredoc)
+# heredoc
+
+[![Build Status](https://circleci.com/gh/MakeNowJust/heredoc.svg?style=svg)](https://circleci.com/gh/MakeNowJust/heredoc) [![GoDoc](https://godoc.org/github.com/MakeNowJusti/heredoc?status.svg)](https://godoc.org/github.com/MakeNowJust/heredoc)
 
 ## About
 
@@ -43,7 +45,7 @@ func main() {
 
 ## API Document
 
- - [Go Walker - github.com/MakeNowJust/heredoc](https://gowalker.org/github.com/MakeNowJust/heredoc)
+ - [heredoc - GoDoc](https://godoc.org/github.com/MakeNowJust/heredoc)
 
 ## License
 
