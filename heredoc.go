@@ -77,7 +77,7 @@ func getMinIndent(lines []string, skipFirstLine bool) int {
 		}
 
 		indentSize := 0
-		for _, r := range []rune(line) {
+		for _, r := range line {
 			if isSpace(r) {
 				indentSize++
 			} else {

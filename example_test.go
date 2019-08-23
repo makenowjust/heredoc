@@ -48,7 +48,7 @@ func ExampleDoc_spec() {
 func ExampleDocf() {
 	libName := "github.com/MakeNowJust/heredoc"
 	author := "TSUYUSATO Kitsune (@MakeNowJust)"
-	fmt.Printf(heredoc.Docf(`
+	fmt.Print(heredoc.Docf(`
 		Library Name  : %s
 		Author        : %s
 		Repository URL: http://%s.git
