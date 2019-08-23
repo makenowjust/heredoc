@@ -15,7 +15,6 @@ $ go get github.com/MakeNowJust/heredoc
 ## Import
 
 ```go
-// usual
 import "github.com/MakeNowJust/heredoc"
 ```
 
@@ -26,6 +25,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/MakeNowJust/heredoc"
 )
 
