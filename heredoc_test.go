@@ -39,6 +39,7 @@ var tests = []testCase{
 		Foo
 		Bar
 	`, "Foo\nBar\n"},
+	{"\n\u3000zenkaku space", "\u3000zenkaku space"},
 }
 
 func TestDoc(t *testing.T) {

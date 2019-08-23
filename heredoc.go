@@ -32,7 +32,6 @@ package heredoc
 import (
 	"fmt"
 	"strings"
-	"unicode"
 )
 
 const maxInt = int(^uint(0) >> 1)
@@ -54,6 +53,20 @@ func Doc(raw string) string {
 	return strings.Join(lines, "\n")
 }
 
+// isSpace checks whether the rune represents space or not.
+// Only white spcaes (U+0020) and horizontal tabs are treated as space character.
+// It is the same as Go.
+//
+// See https://github.com/MakeNowJust/heredoc/issues/6#issuecomment-524231625.
+func isSpace(r rune) bool {
+	switch r {
+	case ' ', '\t':
+		return true
+	default:
+		return false
+	}
+}
+
 // getMinIndent calculates the minimum indentation in lines, excluding empty lines.
 func getMinIndent(lines []string, skipFirstLine bool) int {
 	minIndentSize := maxInt
@@ -65,8 +78,8 @@ func getMinIndent(lines []string, skipFirstLine bool) int {
 
 		indentSize := 0
 		for _, r := range []rune(line) {
-			if unicode.IsSpace(r) {
-				indentSize += 1
+			if isSpace(r) {
+				indentSize++
 			} else {
 				break
 			}
