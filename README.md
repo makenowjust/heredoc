@@ -15,8 +15,6 @@ $ go get github.com/MakeNowJust/heredoc
 ```go
 // usual
 import "github.com/MakeNowJust/heredoc"
-// shortcuts
-import . "github.com/MakeNowJust/heredoc/dot"
 ```
 
 ## Example
@@ -26,11 +24,11 @@ package main
 
 import (
 	"fmt"
-	. "github.com/MakeNowJust/heredoc/dot"
+	"github.com/MakeNowJust/heredoc"
 )
 
 func main() {
-	fmt.Println(D(`
+	fmt.Println(heredoc.Doc(`
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 		sed do eiusmod tempor incididunt ut labore et dolore magna
 		aliqua. Ut enim ad minim veniam, ...
@@ -46,7 +44,6 @@ func main() {
 ## API Document
 
  - [Go Walker - github.com/MakeNowJust/heredoc](https://gowalker.org/github.com/MakeNowJust/heredoc)
- - [Go Walker - github.com/MakeNowJust/heredoc/dot](https://gowalker.org/github.com/MakeNowJust/heredoc/dot)
 
 ## License
 
