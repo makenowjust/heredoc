@@ -8,16 +8,10 @@
 
 Package heredoc provides the here-document with keeping indent.
 
-## Install
-
-```console
-$ go get github.com/MakeNowJust/heredoc
-```
-
 ## Import
 
 ```go
-import "github.com/MakeNowJust/heredoc"
+import "github.com/MakeNowJust/heredoc/v2"
 ```
 
 ## Example
@@ -28,7 +22,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/MakeNowJust/heredoc"
+	"github.com/MakeNowJust/heredoc/v2"
 )
 
 func main() {
