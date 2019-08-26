@@ -15,7 +15,7 @@
 //     import (
 //     	"fmt"
 //     	"runtime"
-//     	. "github.com/MakeNowJust/heredoc/dot"
+//     	. "github.com/MakeNowJust/heredoc/v2/dot"
 //     )
 //
 //     func main() {
@@ -27,7 +27,7 @@
 //     }
 package heredoc_dot
 
-import "github.com/MakeNowJust/heredoc"
+import "github.com/MakeNowJust/heredoc/v2"
 
 // Shortcut heredoc.Doc.
 func D(raw string) string {

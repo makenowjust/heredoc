@@ -6,9 +6,8 @@ package heredoc_test
 
 import (
 	"fmt"
+	"github.com/MakeNowJust/heredoc/v2"
 )
-
-import "github.com/MakeNowJust/heredoc"
 
 func ExampleDoc_lipsum() {
 	fmt.Print(heredoc.Doc(`
