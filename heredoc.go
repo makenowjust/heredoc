@@ -45,12 +45,16 @@ func Doc(raw string) string {
 		skipFirstLine = true
 	}
 
-	lines := strings.Split(raw, "\n")
+	rawLines := strings.Split(raw, "\n")
+	lines := rawLines
+	if skipFirstLine {
+		lines = lines[1:]
+	}
 
-	minIndentSize := getMinIndent(lines, skipFirstLine)
-	lines = removeIndentation(lines, minIndentSize, skipFirstLine)
+	minIndentSize := getMinIndent(lines)
+	lines = removeIndentation(lines, minIndentSize)
 
-	return strings.Join(lines, "\n")
+	return strings.Join(rawLines, "\n")
 }
 
 // isSpace checks whether the rune represents space or not.
@@ -68,14 +72,10 @@ func isSpace(r rune) bool {
 }
 
 // getMinIndent calculates the minimum indentation in lines, excluding empty lines.
-func getMinIndent(lines []string, skipFirstLine bool) int {
+func getMinIndent(lines []string) int {
 	minIndentSize := maxInt
 
 	for i, line := range lines {
-		if i == 0 && skipFirstLine {
-			continue
-		}
-
 		indentSize := 0
 		for _, r := range line {
 			if isSpace(r) {
@@ -97,13 +97,8 @@ func getMinIndent(lines []string, skipFirstLine bool) int {
 }
 
 // removeIndentation removes n characters from the front of each line in lines.
-// Skips first line if skipFirstLine is true, skips empty lines.
-func removeIndentation(lines []string, n int, skipFirstLine bool) []string {
+func removeIndentation(lines []string, n int) []string {
 	for i, line := range lines {
-		if i == 0 && skipFirstLine {
-			continue
-		}
-
 		if len(lines[i]) >= n {
 			lines[i] = line[n:]
 		}
