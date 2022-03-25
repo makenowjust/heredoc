@@ -1,8 +1,8 @@
 # heredoc
 
-[![Version](https://img.shields.io/github/v/release/MakeNowJust/heredoc)](https://github.com/MakeNowJust/heredoc/releases)
-[![Build Status](https://circleci.com/gh/MakeNowJust/heredoc.svg?style=svg)](https://circleci.com/gh/MakeNowJust/heredoc)
-[![GoDoc](https://godoc.org/github.com/MakeNowJusti/heredoc/v2?status.svg)](https://godoc.org/github.com/MakeNowJust/heredoc/v2)
+[![Version](https://img.shields.io/github/v/release/makenowjust/heredoc)](https://github.com/makenowjust/heredoc/releases)
+[![Build Status](https://circleci.com/gh/makenowjust/heredoc.svg?style=svg)](https://circleci.com/gh/makenowjust/heredoc)
+[![Go Reference](https://pkg.go.dev/badge/github.com/MakeNowJust/heredoc/v2.svg)](https://pkg.go.dev/github.com/MakeNowJust/heredoc/v2)
 
 ## About
 
