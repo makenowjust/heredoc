@@ -41,7 +41,7 @@ func main() {
 
 ## API Document
 
- - [heredoc - GoDoc](https://godoc.org/github.com/MakeNowJust/heredoc)
+[heredoc package - github.com/MakeNowJust/heredoc/v2 - pkg.go.dev](https://pkg.go.dev/github.com/MakeNowJust/heredoc/v2)
 
 ## License
 
