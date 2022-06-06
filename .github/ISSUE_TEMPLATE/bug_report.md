@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
-assignees: MakeNowJust
+assignees: makenowjust
 ---
 
 ## Describe the bug
@@ -25,5 +25,5 @@ A clear and concise description of what the bug is.
 ## Environment
 
 - OS: [e.g. Windows, macOS, Linux]
-- Go: [e.g. 1.12.9]
-- Version: [e.g. 1.0.0]
+- Go: [e.g. 1.18.3]
+- Version: [e.g. 2.0.1]
