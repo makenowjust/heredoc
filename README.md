@@ -1,7 +1,8 @@
 # heredoc
 
 [![Version](https://img.shields.io/github/v/release/makenowjust/heredoc)](https://github.com/makenowjust/heredoc/releases)
-[![Go Reference](https://pkg.go.dev/badge/github.com/MakeNowJust/heredoc/v2.svg)](https://pkg.go.dev/github.com/MakeNowJust/heredoc/v2)
+[![Workflow Result](https://github.com/makenowjust/heredoc/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/makenowjust/heredoc/actions/workflows/main.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/makenowjust/heredoc/v2.svg)](https://pkg.go.dev/github.com/MakeNowJust/heredoc/v2)
 
 ## About
 
