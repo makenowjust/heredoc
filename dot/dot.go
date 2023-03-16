@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2022 TSUYUSATO Kitsune
+// Copyright (c) 2014-2023 TSUYUSATO Kitsune
 // This software is released under the MIT License.
 // http://opensource.org/licenses/mit-license.php
 
