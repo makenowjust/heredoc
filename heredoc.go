@@ -15,7 +15,7 @@
 //
 //     "\n\tFoo\n\tBar\n"
 //
-// I dont't want this!
+// I don't want this!
 //
 // However this problem is solved by package heredoc.
 //
