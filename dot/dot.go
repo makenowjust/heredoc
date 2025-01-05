@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2024 TSUYUSATO Kitsune
+// Copyright (c) 2014-2025 TSUYUSATO Kitsune
 // This software is released under the MIT License.
 // http://opensource.org/licenses/mit-license.php
 
@@ -10,21 +10,21 @@
 //
 // For example:
 //
-//     package main
+//	package main
 //
-//     import (
-//     	"fmt"
-//     	"runtime"
-//     	. "github.com/MakeNowJust/heredoc/v2/dot"
-//     )
+//	import (
+//		"fmt"
+//		"runtime"
+//		. "github.com/MakeNowJust/heredoc/v2/dot"
+//	)
 //
-//     func main() {
-//     	fmt.Printf(D(`
-//     		GOROOT: %s
-//     		GOARCH: %s
-//     		GOOS  : %s
-//     	`), runtime.GOROOT(), runtime.GOARCH, runtime.GOOS)
-//     }
+//	func main() {
+//		fmt.Printf(D(`
+//			GOROOT: %s
+//			GOARCH: %s
+//			GOOS  : %s
+//		`), runtime.GOROOT(), runtime.GOARCH, runtime.GOOS)
+//	}
 package heredoc_dot
 
 import "github.com/MakeNowJust/heredoc/v2"

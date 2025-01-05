@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2024 TSUYUSATO Kitsune
+// Copyright (c) 2014-2025 TSUYUSATO Kitsune
 // This software is released under the MIT License.
 // http://opensource.org/licenses/mit-license.php
 
@@ -6,6 +6,7 @@ package heredoc_test
 
 import (
 	"fmt"
+
 	"github.com/MakeNowJust/heredoc/v2"
 )
 
